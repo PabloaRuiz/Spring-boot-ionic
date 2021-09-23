@@ -1,12 +1,14 @@
 package com.raiden.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 
 import java.util.Optional;
 import com.raiden.domain.Categorias;
 import com.raiden.repositories.CategoriaRepository;
+import com.raiden.services.exceptions.DataIntegrrityException;
 import com.raiden.services.exceptions.ObjectNotFoundException;
 
 
@@ -29,8 +31,17 @@ public class CategoriasService {
 	}
 	
 	public Categorias update(Categorias obj) {
-		find(obj.getId());
 		return repo.save(obj);
+	}
+	
+	public Categorias delete(Integer id) {
+		find(id);
+		try {
+			repo.deleteById(id);
+		} catch (DataIntegrityViolationException e ){
+			throw new DataIntegrrityException("Não é possivel excluir uma categoria que tem produtos");
+		}
+		return null;
 	}
 
 }
