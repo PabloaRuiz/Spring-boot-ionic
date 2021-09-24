@@ -63,6 +63,12 @@ public class McApplication implements CommandLineRunner {
 		
 		 Categorias cat1 = new Categorias(null, "Informatica");
 		 Categorias cat2 = new Categorias(null, "Escritorio");
+		 Categorias cat3 = new Categorias(null, "Cama mesa e banho");
+		 Categorias cat4 = new Categorias(null, "Eletrônicos em geral");
+		 Categorias cat5 = new Categorias(null, "Hardware");
+		 Categorias cat6 = new Categorias(null, "Software");
+		 Categorias cat7 = new Categorias(null, "Decoração");
+		 Categorias cat8 = new Categorias(null, "Jardinagem");
 		 
 		 Produtos p1 = new Produtos(null, "Computador", 2000.00);
 		 Produtos p2 = new Produtos(null, "Impressora", 800.00);
@@ -89,7 +95,7 @@ public class McApplication implements CommandLineRunner {
 		 est2.getCidades().addAll(Arrays.asList(ct2,ct3,ct4));
 		 
 		 
-		 cateoriaRepository.saveAll(Arrays.asList(cat1, cat2));
+		 cateoriaRepository.saveAll(Arrays.asList(cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8));
 		 produtosRepository.saveAll(Arrays.asList(p1, p2, p3, p4)); 
 		 estadoRepository.saveAll(Arrays.asList(est1, est2));
 		 cidadeRepository.saveAll(Arrays.asList(ct1,ct1,ct3,ct4));
