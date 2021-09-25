@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import com.raiden.domain.Categorias;
+import com.raiden.dto.CategoriaDTO;
 import com.raiden.repositories.CategoriaRepository;
 import com.raiden.services.exceptions.DataIntegrrityException;
 import com.raiden.services.exceptions.ObjectNotFoundException;
@@ -57,4 +58,7 @@ public class CategoriasService {
 		return repo.findAll(pageRequest);
 	}
 
+	public Categorias fromDTO(CategoriaDTO objDto) {
+		return new Categorias(objDto.getId(), objDto.getNome());
+	}
 }
