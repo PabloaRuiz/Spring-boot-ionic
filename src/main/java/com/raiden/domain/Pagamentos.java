@@ -1,17 +1,10 @@
 package com.raiden.domain;
 
-import java.io.Serializable;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
-import javax.persistence.OneToOne;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.raiden.domain.enums.EstadoPagamento;
+
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
@@ -35,7 +28,7 @@ public abstract class Pagamentos implements Serializable{
 	public Pagamentos(Integer id, EstadoPagamento estado, Pedidos pedidos) {
 		super();
 		this.id = id;
-		this.estado = estado.getCod();
+		this.estado = (estado==null) ? null : estado.getCod();
 		this.pedidos = pedidos;
 	}
 

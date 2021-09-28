@@ -1,31 +1,13 @@
 package com.raiden;
 
+import com.raiden.domain.*;
+import com.raiden.domain.enums.EstadoPagamento;
+import com.raiden.domain.enums.TipoCliente;
+import com.raiden.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.raiden.domain.Categorias;
-import com.raiden.domain.Cidade;
-import com.raiden.domain.Cliente;
-import com.raiden.domain.Endereco;
-import com.raiden.domain.Estado;
-import com.raiden.domain.ItemPedido;
-import com.raiden.domain.PagamentoComCartao;
-import com.raiden.domain.Pagamentos;
-import com.raiden.domain.Pedidos;
-import com.raiden.domain.Produtos;
-import com.raiden.domain.enums.EstadoPagamento;
-import com.raiden.domain.enums.TipoCliente;
-import com.raiden.repositories.CategoriaRepository;
-import com.raiden.repositories.CidadeRepository;
-import com.raiden.repositories.ClienteRepository;
-import com.raiden.repositories.EnderecoRepository;
-import com.raiden.repositories.EstadoRepository;
-import com.raiden.repositories.ItemPedidoRepository;
-import com.raiden.repositories.PagamentoRepository;
-import com.raiden.repositories.PedidoRepository;
-import com.raiden.repositories.ProdutosRepository;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;

@@ -1,8 +1,8 @@
 package com.raiden.domain;
 
-import javax.persistence.Entity;
-
 import com.raiden.domain.enums.EstadoPagamento;
+
+import javax.persistence.Entity;
 
 
 @Entity

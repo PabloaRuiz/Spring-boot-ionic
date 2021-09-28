@@ -1,5 +1,10 @@
 package com.raiden.services;
 
+import com.raiden.domain.Cliente;
+import com.raiden.dto.ClienteDTO;
+import com.raiden.repositories.ClienteRepository;
+import com.raiden.services.exceptions.DataIntegrrityException;
+import com.raiden.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
@@ -9,12 +14,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
-import com.raiden.domain.Cliente;
-import com.raiden.dto.ClienteDTO;
-import com.raiden.repositories.ClienteRepository;
-import com.raiden.services.exceptions.DataIntegrrityException;
-import com.raiden.services.exceptions.ObjectNotFoundException;
 
 
 

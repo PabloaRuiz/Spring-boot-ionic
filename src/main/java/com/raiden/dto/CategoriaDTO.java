@@ -1,12 +1,10 @@
 package com.raiden.dto;
 
-import java.io.Serializable;
-
-import javax.validation.constraints.NotEmpty;
-
+import com.raiden.domain.Categorias;
 import org.hibernate.validator.constraints.Length;
 
-import com.raiden.domain.Categorias;
+import javax.validation.constraints.NotEmpty;
+import java.io.Serializable;
 
 
 public class CategoriaDTO implements Serializable {

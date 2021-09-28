@@ -1,5 +1,10 @@
 package com.raiden.services;
 
+import com.raiden.domain.Categorias;
+import com.raiden.dto.CategoriaDTO;
+import com.raiden.repositories.CategoriaRepository;
+import com.raiden.services.exceptions.DataIntegrrityException;
+import com.raiden.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
@@ -9,11 +14,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import com.raiden.domain.Categorias;
-import com.raiden.dto.CategoriaDTO;
-import com.raiden.repositories.CategoriaRepository;
-import com.raiden.services.exceptions.DataIntegrrityException;
-import com.raiden.services.exceptions.ObjectNotFoundException;
 
 @Service
 public class CategoriasService {
@@ -33,6 +33,8 @@ public class CategoriasService {
 	}
 	
 	public Categorias update(Categorias obj) {
+		Categorias newObj = find(obj.getId());
+		updateData(newObj, obj);
 		return repo.save(obj);
 	}
 	
@@ -57,5 +59,9 @@ public class CategoriasService {
 
 	public Categorias fromDTO(CategoriaDTO objDto) {
 		return new Categorias(objDto.getId(), objDto.getNome());
+	}
+
+	private void updateData(Categorias newObj, Categorias obj){
+		newObj.setNome(obj.getNome());
 	}
 }

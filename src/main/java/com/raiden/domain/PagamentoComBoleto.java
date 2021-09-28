@@ -1,11 +1,10 @@
 package com.raiden.domain;
 
-import java.util.Date;
-
-import javax.persistence.Entity;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.raiden.domain.enums.EstadoPagamento;
+
+import javax.persistence.Entity;
+import java.util.Date;
 
 @Entity
 public class PagamentoComBoleto extends Pagamentos {

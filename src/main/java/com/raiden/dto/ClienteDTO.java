@@ -1,13 +1,11 @@
 package com.raiden.dto;
 
-import java.io.Serializable;
+import com.raiden.domain.Cliente;
+import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
-
-import org.hibernate.validator.constraints.Length;
-
-import com.raiden.domain.Cliente;
+import java.io.Serializable;
 
 public class ClienteDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
