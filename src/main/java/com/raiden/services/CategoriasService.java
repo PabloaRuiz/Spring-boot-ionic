@@ -15,9 +15,6 @@ import com.raiden.repositories.CategoriaRepository;
 import com.raiden.services.exceptions.DataIntegrrityException;
 import com.raiden.services.exceptions.ObjectNotFoundException;
 
-
-
-
 @Service
 public class CategoriasService {
 
