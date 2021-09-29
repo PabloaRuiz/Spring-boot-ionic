@@ -23,7 +23,6 @@ public class ClienteDTO implements Serializable{
 	private String CpfOuCnpj;
 
 	public ClienteDTO() {
-		
 	}
 	
 	public ClienteDTO(Cliente obj) {
