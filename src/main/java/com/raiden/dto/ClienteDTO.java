@@ -19,7 +19,9 @@ public class ClienteDTO implements Serializable{
 	@NotEmpty(message="Preenchimento Obrigatorio")
 	@Email(message="E-mail inválido!")
 	private String email;
-	
+
+	private String CpfOuCnpj;
+
 	public ClienteDTO() {
 		
 	}
@@ -28,6 +30,7 @@ public class ClienteDTO implements Serializable{
 		id = obj.getId();
 		nome = obj.getNome();
 		email = obj.getEmail();
+
 	}
 	
 
@@ -54,6 +57,6 @@ public class ClienteDTO implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 
 }

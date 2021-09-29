@@ -2,6 +2,7 @@ package com.raiden.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.raiden.domain.enums.TipoCliente;
+import javax.persistence.CascadeType;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -24,7 +25,7 @@ public class Cliente implements Serializable{
 	private Integer tipo;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy="cliente")
+	@OneToMany(mappedBy="cliente", cascade=CascadeType.ALL)
 	private List<Endereco> endereco = new ArrayList<>();
 	
 	@ElementCollection
