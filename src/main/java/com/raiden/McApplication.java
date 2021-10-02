@@ -56,14 +56,24 @@ public class McApplication implements CommandLineRunner {
 		 Produtos p2 = new Produtos(null, "Impressora", 800.00);
 		 Produtos p3 = new Produtos(null, "Mouse", 80.00);
 		 Produtos p4 = new Produtos(null, "Teclado", 180.00);
+		 Produtos p5 = new Produtos(null, "Monitor", 780.00);
+		 Produtos p6 = new Produtos(null, "Cadeira", 1800.00);
+		 Produtos p7 = new Produtos(null, "headphones", 120.00);
+		 Produtos p8 = new Produtos(null, "Livro - Guia do Programador", 80.00);
 		 
-		 cat1.getProdutos().addAll(Arrays.asList(p1,p2,p3,p4));
-		 cat2.getProdutos().addAll(Arrays.asList(p2));
+		 cat1.getProdutos().addAll(Arrays.asList(p1,p2,p3,p4,p5));
+		 cat2.getProdutos().addAll(Arrays.asList(p2,p6,p7));
+		 cat6.getProdutos().addAll(Arrays.asList(p8));
+		 cat4.getProdutos().addAll(Arrays.asList(p1,p2,p3,p4,p5,p7));
 		 
-		 p1.getCategorias().addAll(Arrays.asList(cat1));
-		 p2.getCategorias().addAll(Arrays.asList(cat1, cat2));
-		 p3.getCategorias().addAll(Arrays.asList(cat1));
-		 p4.getCategorias().addAll(Arrays.asList(cat1));
+		 p1.getCategorias().addAll(Arrays.asList(cat1, cat4));
+		 p2.getCategorias().addAll(Arrays.asList(cat1, cat2, cat4));
+		 p3.getCategorias().addAll(Arrays.asList(cat1, cat4));
+		 p4.getCategorias().addAll(Arrays.asList(cat1, cat4));
+		 p5.getCategorias().addAll(Arrays.asList(cat1, cat4));
+		 p6.getCategorias().addAll(Arrays.asList(cat2));
+		 p7.getCategorias().addAll(Arrays.asList(cat4, cat2));
+		 p8.getCategorias().addAll(Arrays.asList(cat6));
 		 
 		 Estado est1 = new Estado(null, "Minas Gerais");
 		 Estado est2 = new Estado(null, "São Paulo");
@@ -78,7 +88,7 @@ public class McApplication implements CommandLineRunner {
 		 
 		 
 		 cateoriaRepository.saveAll(Arrays.asList(cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8));
-		 produtosRepository.saveAll(Arrays.asList(p1, p2, p3, p4)); 
+		 produtosRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5, p6, p7, p8));
 		 estadoRepository.saveAll(Arrays.asList(est1, est2));
 		 cidadeRepository.saveAll(Arrays.asList(ct1,ct1,ct3,ct4));
 		 
