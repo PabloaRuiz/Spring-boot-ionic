@@ -1,12 +1,14 @@
 package com.raiden.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.raiden.domain.enums.EstadoPagamento;
 
 import javax.persistence.Entity;
 import java.util.Date;
 
 @Entity
+@JsonTypeName("PagamentoComCartao")
 public class PagamentoComBoleto extends Pagamentos {
 	private static final long serialVersionUID = 1L;
 	

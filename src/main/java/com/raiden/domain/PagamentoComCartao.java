@@ -1,11 +1,13 @@
 package com.raiden.domain;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.raiden.domain.enums.EstadoPagamento;
 
 import javax.persistence.Entity;
 
 
 @Entity
+@JsonTypeName("pagamentoComCartao")
 public class PagamentoComCartao extends Pagamentos{
 	private static final long serialVersionUID = 1L;
 	

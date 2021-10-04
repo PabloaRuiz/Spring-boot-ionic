@@ -38,6 +38,14 @@ public class ItemPedido implements Serializable {
 	public Pedidos getPedido() {
 		return id.getPedido();
 	}
+
+	public void setPedidos(Pedidos pedidos) {
+		id.setPedido(pedidos);
+	}
+
+	public void setProdutos(Produtos produtos) {
+		id.setProduto(produtos);
+	}
 	
  
 	public Produtos getProduto() {
